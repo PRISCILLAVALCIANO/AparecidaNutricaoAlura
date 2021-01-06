@@ -132,3 +132,10 @@ button[disabled=disabled], button:disabled {
 .campo-invalido{
 	border: 1px solid red;
 }
+
+/*Estilização no JS*/
+
+.paciente-invalido {
+	background: #F08080;
+	color: #FFFFFF;
+}

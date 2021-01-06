@@ -3,7 +3,6 @@ var titulo = document.querySelector(".titulo");
 
 // Obtentando os dados do peso e altura e calculando o IMC do primeiro paciente
 var pacientes = document.querySelectorAll(".paciente");
-console.log(pacientes);
 
 for(var i = 0; i < pacientes.length; i++) {
     var paciente = pacientes[i];
@@ -26,13 +25,15 @@ for(var i = 0; i < pacientes.length; i++) {
     if(peso <= 0 || peso >= 1000) {
         console.log("Peso inválido, revise o cadastro!");
         pesoValido = false;
-        tdImc.textContent = "Peso inválido!"
+        tdImc.textContent = "Peso inválido!";
+        paciente.classList.add("paciente-invalido");
     }
 
     if(altura <= 0 || altura >= 2.50) {
         console.log("Altura inválida, revise o cadastro!");
         alturaValida = false;
-        tdImc.textContent = "Altura inválida!"
+        tdImc.textContent = "Altura inválida!";
+        paciente.classList.add("paciente-invalido");
     }
 
     if(pesoValido && alturaValida) {
