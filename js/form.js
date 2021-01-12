@@ -13,6 +13,12 @@ botaoAdicionar.addEventListener("click", function(event){
     //Cria a tr e td do paciente
     
     var pacienteTr = montaTr(paciente);
+
+    //Verifica se o paciente não for valido
+    if(!validaPaciente(paciente)){
+        console.log("Paciente inválido!");
+        return;
+    }
   
 
     //Adicionando o paciente na tabela
@@ -51,10 +57,21 @@ function montaTr(paciente){
     return pacienteTr;
 }
 
+//Essa funçao preenchera os dados na planilha e as classes
 function montaTd(dado, classe){
     var td = document.createElement("td");
     td.textContent = dado;
     td.classList.add(classe);
 
     return td;
+}
+
+//Essa função valida as informações preenchidas no form
+function validaPaciente(paciente){
+    if(validaPeso(paciente.peso)){
+        return true;
+    }else {
+        return false;
+    }
+
 }
