@@ -8,15 +8,16 @@ botaoAdicionar.addEventListener("click", function(event){
     //Extraindo informações do paciente do form
     var paciente = obtemPacienteDoFormulario(form);
 
-    console.log(paciente);
-
     //Cria a tr e td do paciente
     
     var pacienteTr = montaTr(paciente);
 
     //Verifica se o paciente não for valido
-    if(!validaPaciente(paciente)){
-        console.log("Paciente inválido!");
+    var erros = validaPaciente(paciente);
+
+    console.log(erros);
+    if(erros.length > 0){
+        exibeMensagensDeErro(erros);
         return;
     }
   
@@ -28,7 +29,21 @@ botaoAdicionar.addEventListener("click", function(event){
 
     //Limpar campos do formulario depois de adicionado
     form.reset();
+    var mensagensErro = document.querySelector("#mensagens-erro");
+    mensagensErro.innerHTML = "";
 });
+
+function exibeMensagensDeErro(erros) {
+    var ul = document.querySelector("#mensagens-erro");
+    ul.innerHTML = "";
+
+    erros.forEach(function(erro) {
+        var li = document.createElement("li");
+        li.textContent = erro;
+        ul.appendChild(li);
+    });
+
+}
 
 //Essa função vai obter os dados que usuário preencher no formulário
 function obtemPacienteDoFormulario(form){
@@ -68,10 +83,20 @@ function montaTd(dado, classe){
 
 //Essa função valida as informações preenchidas no form
 function validaPaciente(paciente){
-    if(validaPeso(paciente.peso)){
-        return true;
-    }else {
-        return false;
+    var erros = [];
+
+    if(paciente.nome.length == 0) erros.push("O nome não pode ser em branco!");
+
+    if(!validaPeso(paciente.peso)){
+        erros.push("Peso é inválido");
     }
+
+    if(!validaAltura(paciente.altura)){
+        erros.push("Altura é inválida");
+    }
+
+    if(paciente.gordura.length == 0) erros.push("Gordura não pode ser em branco!");
+
+    return erros;
 
 }

@@ -91,6 +91,10 @@ label{
 	padding-right: .5em;
 }
 
+#mensagens-erro {
+	color: #FF0000;
+}
+
 .grupo{
 	width: 32%;
 	display: inline-block;
