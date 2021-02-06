@@ -2,6 +2,7 @@ var campoFiltro = document.querySelector("#filtrar-tabela");
 
 campoFiltro.addEventListener("input", function(){
     var pacientes = document.querySelectorAll(".paciente");
+    console.log(pacientes);
 
     if(this.value.length > 0) {
         for(var i = 0; i < pacientes.length; i++){
