@@ -160,3 +160,9 @@ button[disabled=disabled], button:disabled {
 	opacity: 0;
 	transition: 0.5s;
 }
+
+#erro-ajax {
+	color: #c71616;
+	font-weight: bold;
+	font-size: 16px;
+}
