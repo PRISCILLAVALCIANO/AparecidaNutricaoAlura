@@ -30,6 +30,16 @@ Assuntos abordados no curso
 <br>
 <br>
 
+### Tecnologias do projeto
+
+- HTML5
+- CSS3
+- JavaScript
+
+<br>
+<br>
+<br>
+
 ### Agradecimentos
 
 <a href="https://www.alura.com.br/">Alura</a>
