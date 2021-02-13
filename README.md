@@ -1,7 +1,10 @@
 # Projeto Aparecida Nutrição
- O projeto foi criado no curso de *Introducao ao JavaScript da Alura JavaScript: Programando na linguagem da Web* pelo instrutor *Douglas Quintanilha*
+ O projeto foi criado no curso de *Introducao ao JavaScript da Alura JavaScript: Programando na linguagem da Web* pelo instrutor *Douglas Quintanilha*.
+ <br>
 No curso será aplicado as funções do JavaScript para manipulação da lista de pacientes, como cadastrar o cadastro de novos pacientes, como apagar os pacientes da tabela, calcular o IMC automaticamente, como filtrar os pacientes da tabela e como adicionar uma lista de pacientes de um servidor externo.
-Assuntos abordados no curso
+<br>
+
+#### Assuntos abordados no curso
 - Interpretando scripts no navegador
 - DOM
 - Método Query Selector
